@@ -9,10 +9,6 @@ package dip.lab2;
  *
  * @author Josh
  */
-public interface TipCalculatorStrategy {
-    
-    public abstract double calculateTip();
-    
-    public abstract void displayTip();
-    
+public enum ServiceQuality {
+    GOOD, FAIR, POOR
 }

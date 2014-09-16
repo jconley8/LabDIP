@@ -1,9 +1,9 @@
 package dip.lab2;
 
 // An useful import if you need it.
-import java.text.NumberFormat;
+
 // Another useful import if you need it.
-import javax.swing.JOptionPane;
+
 
 /**
  * Just a test class for input and output.
@@ -19,13 +19,12 @@ import javax.swing.JOptionPane;
  * @author your name goes here
  */
 public class Startup {
-    public static enum ServiceQuality {
-           GOOD, FAIR, POOR
-    };
- 
+    
+
     public static void main(String[] args) {
+        TipCalculatorService tip = new TipCalculatorService(new FoodServiceTipCalculator(ServiceQuality.GOOD, 5));
         
-        
+        tip.displayTip();
     }
 
 }

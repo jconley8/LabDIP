@@ -17,9 +17,7 @@ public class FoodServiceTipCalculator implements TipCalculatorStrategy {
     private static final double POOR_RATE = 0.10;
 
     private double bill;
-    public enum ServiceQuality {
-        GOOD, FAIR, POOR
-    }
+
     private ServiceQuality serviceQuality;
 
     public FoodServiceTipCalculator(ServiceQuality q, double billAmt) {
@@ -42,8 +40,14 @@ public class FoodServiceTipCalculator implements TipCalculatorStrategy {
                 tip = bill * POOR_RATE;
                 break;
         }
-
+        
         return tip;
+        
+    }
+    
+    @Override
+    public void displayTip () {
+        System.out.println("You owe your server a tip of: " + calculateTip());
     }
 
     public final void setBill(double billAmt) {
@@ -61,5 +65,7 @@ public class FoodServiceTipCalculator implements TipCalculatorStrategy {
     public ServiceQuality getServiceQuality() {
         return serviceQuality;
     }
+    
+
 
 }

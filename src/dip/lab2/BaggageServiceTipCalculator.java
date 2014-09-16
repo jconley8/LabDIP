@@ -20,9 +20,7 @@ public class BaggageServiceTipCalculator implements TipCalculatorStrategy {
 
     private double baseTipPerBag;
     private int bagCount;
-    public enum ServiceQuality {
-        GOOD, FAIR, POOR
-    }
+
     private ServiceQuality serviceQuality;
 
     public BaggageServiceTipCalculator(ServiceQuality q, int bags) {
@@ -49,6 +47,11 @@ public class BaggageServiceTipCalculator implements TipCalculatorStrategy {
         }
 
         return tip;
+    }
+    
+    @Override
+    public void displayTip () {
+        System.out.println("You owe your baggage handler a tip of: " + calculateTip());
     }
 
     public final void setServiceRating(ServiceQuality q) {
