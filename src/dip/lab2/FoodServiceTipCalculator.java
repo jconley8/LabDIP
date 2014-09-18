@@ -57,10 +57,12 @@ public class FoodServiceTipCalculator implements TipCalculatorStrategy {
         bill = billAmt;
     }
 
+
     public final void setServiceRating(ServiceQuality q) {
         // No need to validate because enums provide type safety!
         serviceQuality = q;
     }
+
 
     public ServiceQuality getServiceQuality() {
         return serviceQuality;
@@ -71,6 +73,7 @@ public class FoodServiceTipCalculator implements TipCalculatorStrategy {
     }
 
     public void setMIN_BILL(double MIN_BILL) {
+        // needs validation
         this.MIN_BILL = MIN_BILL;
     }
 
@@ -79,6 +82,7 @@ public class FoodServiceTipCalculator implements TipCalculatorStrategy {
     }
 
     public void setGOOD_RATE(double GOOD_RATE) {
+        // needs validation
         this.GOOD_RATE = GOOD_RATE;
     }
 
@@ -87,6 +91,7 @@ public class FoodServiceTipCalculator implements TipCalculatorStrategy {
     }
 
     public void setFAIR_RATE(double FAIR_RATE) {
+        // needs validation
         this.FAIR_RATE = FAIR_RATE;
     }
 
@@ -95,10 +100,7 @@ public class FoodServiceTipCalculator implements TipCalculatorStrategy {
     }
 
     public void setPOOR_RATE(double POOR_RATE) {
+        // needs validation
         this.POOR_RATE = POOR_RATE;
     }
-    
-
-    
-
 }

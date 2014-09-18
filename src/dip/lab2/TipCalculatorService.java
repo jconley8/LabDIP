@@ -26,7 +26,5 @@ public class TipCalculatorService {
     
     public void displayTip() {
         tipCalc.displayTip();
-    }
-    
-    
+    }    
 }
