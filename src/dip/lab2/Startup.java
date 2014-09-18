@@ -22,7 +22,7 @@ public class Startup {
     
 
     public static void main(String[] args) {
-        TipCalculatorService tip = new TipCalculatorService(new FoodServiceTipCalculator(ServiceQuality.GOOD, 5));
+        TipCalculatorService tip = new TipCalculatorService(new BaggageServiceTipCalculator(ServiceQuality.POOR, 5));
         
         tip.displayTip();
     }
