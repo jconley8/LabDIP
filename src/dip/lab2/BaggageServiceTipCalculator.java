@@ -30,8 +30,9 @@ public class BaggageServiceTipCalculator implements TipCalculatorStrategy {
         baseTipPerBag = 1.00; // set default value
     }
 
+    
     @Override
-    public double calculateTip() {
+    public double getCalculatedTip() {
         double tip = 0.00; // always initialize local variables
 
         switch(serviceQuality) {
@@ -49,10 +50,7 @@ public class BaggageServiceTipCalculator implements TipCalculatorStrategy {
         return tip;
     }
     
-    @Override
-    public void displayTip () {
-        System.out.println("You owe your baggage handler a tip of: " + calculateTip());
-    }
+
 
     public final void setServiceRating(ServiceQuality q) {
         // No need to validate because enums provide type safety!

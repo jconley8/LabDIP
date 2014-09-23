@@ -25,8 +25,9 @@ public class FoodServiceTipCalculator implements TipCalculatorStrategy {
         this.setBill(billAmt);
     }
 
+    
     @Override
-    public double calculateTip() {
+    public double getCalculatedTip() {
         double tip = 0.00; // always initialize local variables
 
         switch(serviceQuality) {
@@ -44,11 +45,7 @@ public class FoodServiceTipCalculator implements TipCalculatorStrategy {
         return tip;
         
     }
-    
-    @Override
-    public void displayTip () {
-        System.out.println("You owe your server a tip of: " + calculateTip());
-    }
+
 
     public final void setBill(double billAmt) {
         if(billAmt < MIN_BILL) {

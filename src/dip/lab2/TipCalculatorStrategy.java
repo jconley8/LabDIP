@@ -11,8 +11,6 @@ package dip.lab2;
  */
 public interface TipCalculatorStrategy {
     
-    public abstract double calculateTip();
-    
-    public abstract void displayTip();
+    public abstract double getCalculatedTip();
     
 }

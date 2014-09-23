@@ -24,7 +24,7 @@ public class TipCalculatorService {
         this.tipCalc = tipCalc;
     }
     
-    public void displayTip() {
-        tipCalc.displayTip();
+    public double getCalculatedTip() {
+         return tipCalc.getCalculatedTip();
     }    
 }
